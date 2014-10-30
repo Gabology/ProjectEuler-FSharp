@@ -1,0 +1,8 @@
+C:\Users\Gabriel\Dropbox\VS Projects\ProjectEuler-FSharp\Problem1\Problem1\bin\Debug\Problem1.exe.config
+C:\Users\Gabriel\Dropbox\VS Projects\ProjectEuler-FSharp\Problem1\Problem1\bin\Debug\Problem1.XML
+C:\Users\Gabriel\Dropbox\VS Projects\ProjectEuler-FSharp\Problem1\Problem1\bin\Debug\Problem1.exe
+C:\Users\Gabriel\Dropbox\VS Projects\ProjectEuler-FSharp\Problem1\Problem1\bin\Debug\Problem1.pdb
+C:\Users\Gabriel\Dropbox\VS Projects\ProjectEuler-FSharp\Problem1\Problem1\bin\Debug\FSharp.Core.dll
+C:\Users\Gabriel\Dropbox\VS Projects\ProjectEuler-FSharp\Problem1\Problem1\bin\Debug\FSharp.Core.xml
+C:\Users\Gabriel\Dropbox\VS Projects\ProjectEuler-FSharp\Problem1\Problem1\obj\Debug\Problem1.exe
+C:\Users\Gabriel\Dropbox\VS Projects\ProjectEuler-FSharp\Problem1\Problem1\obj\Debug\Problem1.pdb
