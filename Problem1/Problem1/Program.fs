@@ -4,7 +4,8 @@
 
 open System
 
-let multiples = [for n in 1..1000 do if n % 3 = 0 || n % 5 = 0 then yield n]
+let multiples = [1..999]
+             |> List.filter (fun n -> n % 3 = 0 || n % 5 = 0)
              |> List.sum
              |> printfn "The sum of all multiples are: %d"
 Console.ReadKey () |> ignore
