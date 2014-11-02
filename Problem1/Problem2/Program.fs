@@ -3,7 +3,7 @@
 open System
 
 let rec fib n = match n with
-                | 0 | 1 | 2 -> n
+                | 0 | 1 -> 1
                 | _ -> fib (n - 1) + fib (n - 2)
 
 let rec nOfFibTermsUpUntil x y = if fib (y + 1) < x then nOfFibTermsUpUntil x (y + 1) else y
