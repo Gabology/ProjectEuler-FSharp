@@ -12,6 +12,7 @@ open ScratchPad
 // What is the largest prime factor of the number 600851475143 ?
 open System
 open System.Diagnostics
+open System.Linq
 
 let problem3 () = 
     let rec primeFactors n i nums = 
@@ -32,3 +33,14 @@ let p3 () =
     primeFactors 600851475143L 2L []
 
 p3()
+
+let isPalindrome n = 
+ let text = string n
+ let rev = String.Concat(text.Reverse())
+ text = rev
+
+let p4 () = 
+    seq { for x in 100..999 do 
+           for y in 100..999 do if isPalindrome (x * y) then yield x * y }
+
+p4() |> Seq.max
