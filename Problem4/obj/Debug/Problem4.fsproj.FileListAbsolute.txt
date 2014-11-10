@@ -1,0 +1,8 @@
+C:\Users\Gabriel\Documents\GitHub\ProjectEuler-FSharp\Problem4\bin\Debug\Problem4.exe.config
+C:\Users\Gabriel\Documents\GitHub\ProjectEuler-FSharp\Problem4\bin\Debug\Problem4.XML
+C:\Users\Gabriel\Documents\GitHub\ProjectEuler-FSharp\Problem4\bin\Debug\Problem4.exe
+C:\Users\Gabriel\Documents\GitHub\ProjectEuler-FSharp\Problem4\bin\Debug\Problem4.pdb
+C:\Users\Gabriel\Documents\GitHub\ProjectEuler-FSharp\Problem4\bin\Debug\FSharp.Core.dll
+C:\Users\Gabriel\Documents\GitHub\ProjectEuler-FSharp\Problem4\bin\Debug\FSharp.Core.xml
+C:\Users\Gabriel\Documents\GitHub\ProjectEuler-FSharp\Problem4\obj\Debug\Problem4.exe
+C:\Users\Gabriel\Documents\GitHub\ProjectEuler-FSharp\Problem4\obj\Debug\Problem4.pdb
