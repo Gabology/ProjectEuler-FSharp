@@ -9,9 +9,10 @@
 // Anything divisible by 20 will be divisible by the factors of 20, namely 2, 4, 5, 10
 
 // Can this be solved by brute-forcing? Let's try that first
-let timer = System.Diagnostics.Stopwatch.StartNew();
+open System
 
 let p5BruteForce =
+    let timer = System.Diagnostics.Stopwatch.StartNew();
     let divisors = [20..-1..3]
     let isDivOneToTwenty n = divisors |> List.forall (fun x -> n % x = 0)
 
@@ -21,7 +22,24 @@ let p5BruteForce =
             | true -> n
             | false -> loop (n + 2)
         loop n
-    findNum 2520
+    String.Format("Brute force method yielded: {0}, in {1}ms", (findNum 2520), timer.ElapsedMilliseconds)
 
-p5BruteForce |> printf "%d\n"
-timer.ElapsedMilliseconds |> printf "Elapsed time %dms\n"
+// Brute-forcing yielded okay performance with a completion time of 2.5 - 3.0 seconds
+// However using a "factorization" table yields far superior performance, finding the solution in 10ms
+let p5TableMethod = 
+    let timer = System.Diagnostics.Stopwatch.StartNew();
+    let rec lcm nums header i =
+        if List.forall((=)1) nums then List.reduce(fun acc elem -> acc * elem) header
+        else 
+            match List.filter (fun n -> n % i = 0) nums with
+             | [] -> lcm nums header (i + 1)
+             | factors -> 
+                         let dividedNums = 
+                             nums
+                             |> List.filter (fun x -> not (List.exists ((=)x) factors))
+                             |> List.append (List.map (fun y -> y / i) factors)
+                         lcm dividedNums (i::header) i
+    String.Format("Table method yielded: {0}, in {1}ms", (lcm [1..20] [] 2), timer.ElapsedMilliseconds)
+
+p5BruteForce |> printf "%s\n"
+p5TableMethod |> printf "%s\n"
