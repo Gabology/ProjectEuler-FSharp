@@ -3,19 +3,51 @@
 // What is the 10 001st prime number?
 
 // Okay so we have a couple of options once it comes to prime number generation, let's start off with a simple bruteforce approach.
+module Types =
+    type Mark = Marked | Unmarked
+    type Sieve = Sieve of Mark list
 
-let primeNumbersBf n =
+    let crossNumber n sieve = 
+        sieve
+        |> List.filter ((<>) n)
+        |> Sieve
+
+open Types
+open System
+
+let p7BruteForce() =
     let timer = System.Diagnostics.Stopwatch.StartNew()
     let isPrime n = 
-          [2..int(sqrt (float n))]
-          |> List.forall(fun x -> n % x <> 0)
+        if n = 0 || n = 1 then false else
+            [2..int(sqrt (float n))] 
+            |> List.forall(fun x -> n % x <> 0)
   
-    Seq.initInfinite id 
-    |> Seq.filter isPrime 
-    |> Seq.take n
-    |> Seq.last
+    //Seq.initInfinite id 
+    seq { for x in 3..2..Int32.MaxValue do if isPrime x then yield x }
+    |> Seq.append [2]
+    |> Seq.nth (10001-1) // Since sequences are 0-indexed the 10001st prime will be at index 10001 - 1
     |> printfn "Generated solution in %d ms, solution was: %d" timer.ElapsedMilliseconds
 
-primeNumbersBf 10001
+// Okay so bruteforcing approach took around 1,5seconds
+p7BruteForce()
+// 
+//let p7SieveMethod =
+//    let markMultiples n sieve = 
+//        let lowerBound = n * n
+//        let upperBound = sieve |> Seq.length
+//        for x in lowerBound .. n .. upperBound do
+//            sieve.[x] = Marked
+//        sieve
+//         
+//    let getPrimes n = 
+//        {2..n}
+//        |> Seq.filter  
 
-// Okay so bruteforcing approach took around 2,5seconds
+(*
+    Let us first describe the original “by hand” sieve algorithm as practiced by Eratosthenes. 
+    We start with a table of numbers (e.g., 2, 3, 4, 5, . . . ) and progressively cross off numbers in the table 
+    until the only numbers left are primes. Specifically, we begin with the first number, p, in the table, and 
+        
+        1. Declare p to be prime, and cross off all the multiples of that number in the table, starting from p^2;
+        2. Find the next number in the table after p that is not yet crossed off and set p to that number; and then repeat from step 1.
+*)
