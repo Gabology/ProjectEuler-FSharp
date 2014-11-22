@@ -28,7 +28,7 @@ let problem8() =
     (* We only need to go to 987 because 1000 isn't divisble by 13 and if we were to take the last 11 digits from 987 
        we would end up with 0 anyhow. *)
     seq { for i in 0..987 -> str.[i..i + 12] } 
-    |> Seq.map (Seq.fold (fun acc chr -> acc * int64 (Char.GetNumericValue(chr))) 1L)
+    |> Seq.map (Seq.fold (fun acc chr -> acc *  (int64 chr - 48L)) 1L)
     |> Seq.max
 
 problem8() 
