@@ -7,13 +7,9 @@ module Types =
     type Mark = Marked | Unmarked
     type Sieve = Sieve of Mark list
 
-    let crossNumber n sieve = 
-        sieve
-        |> List.filter ((<>) n)
-        |> Sieve
-
 open Types
 open System
+open System.Collections.Generic
 
 let p7BruteForce() =
     let timer = System.Diagnostics.Stopwatch.StartNew()
@@ -29,20 +25,16 @@ let p7BruteForce() =
     |> printfn "Generated solution in %d ms, solution was: %d" timer.ElapsedMilliseconds
 
 // Okay so bruteforcing approach took around 1,5seconds
-p7BruteForce()
+//p7BruteForce()
 // 
 //let p7SieveMethod =
-//    let markMultiples n sieve = 
-//        let lowerBound = n * n
-//        let upperBound = sieve |> Seq.length
-//        for x in lowerBound .. n .. upperBound do
-//            sieve.[x] = Marked
-//        sieve
-//         
-//    let getPrimes n = 
-//        {2..n}
-//        |> Seq.filter  
+//    let addComposites i composites = 
+//        let factors = composites.[i]
+//
+//    let rec trackComposites i (compositeNums: Map<int, int list>) primes =
+//        if compositeNums.ContainsKey i then 
 
+//p7SieveMethod 
 (*
     Let us first describe the original “by hand” sieve algorithm as practiced by Eratosthenes. 
     We start with a table of numbers (e.g., 2, 3, 4, 5, . . . ) and progressively cross off numbers in the table 

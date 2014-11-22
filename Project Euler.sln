@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Problem1", "Problem1\Problem1.fsproj", "{698704C4-3489-447A-BB4D-97F7D868EAB0}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Problem6", "Problem6\Problem6.fsproj", "{90E3FCDD-93AA-4222-BB6E-C0199528FF48}"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Problem7", "Problem7\Problem7.fsproj", "{71B37A61-3159-4BDD-8E2D-C792B9786CC9}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Problem8", "Problem8\Problem8.fsproj", "{22C9AFD8-93DD-4A1E-9B16-EF559B35DF67}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{71B37A61-3159-4BDD-8E2D-C792B9786CC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71B37A61-3159-4BDD-8E2D-C792B9786CC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71B37A61-3159-4BDD-8E2D-C792B9786CC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22C9AFD8-93DD-4A1E-9B16-EF559B35DF67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22C9AFD8-93DD-4A1E-9B16-EF559B35DF67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22C9AFD8-93DD-4A1E-9B16-EF559B35DF67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22C9AFD8-93DD-4A1E-9B16-EF559B35DF67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
